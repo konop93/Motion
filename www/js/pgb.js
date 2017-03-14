@@ -20,3 +20,8 @@ function deviceInfo() {
 	navigator.notification.alert(info);
 	
 }
+
+function personalInfo() {
+	
+	navigator.notification.alert("Kasia Konopelska");
+}
