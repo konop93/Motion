@@ -6,22 +6,19 @@ function onDeviceReady() {
 	navigator.notification.beep(1);
 }
 
-function deviceInfo() {
+function checkConnection() {
+    var networkState = navigator.connection.type;
 
-	info =  'Hi, I am your smartphone :-)' + '\n' +
-			'=====' + '\n' +
-			'Device Name    : '     + device.name     + '\n' + 
-			'Device Cordova : '  + device.cordova + '\n' + 
-			'Device Platform: ' + device.platform + '\n' + 
-			'Device UUID    : '     + device.uuid     + '\n' + 
-			'Device Model   : '    + device.model     + '\n' + 
-			'Device Version : '  + device.version  + '\n';
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = '2G telephone network';
+    states[Connection.CELL_3G]  = '3G telephone network';
+    states[Connection.CELL_4G]  = '4G telephone network';
+    states[Connection.CELL]     = 'Telephone network';
+    states[Connection.NONE]     = 'No connection';
 
-	navigator.notification.alert(info);
-	
+    navigator.notification.alert('Connection type: ' + states[networkState]);
 }
-
-function personalInfo() {
-	
-	navigator.notification.alert("Kasia Konopelska");
 }
