@@ -4,8 +4,8 @@
 		id          = "myfirstapp"
         version     = "1.0.0" >
 
-    <name>First app</name>
-    <description>Business card</description>
+    <name>Motion</name>
+    <description>ruch ekranu</description>
     <author email="kasiakonopelska@gmail.com">
 		Kasia Konopelska
 	</author>
@@ -14,4 +14,5 @@
 	<plugin name="cordova-plugin-device" spec="~1.1.4" />
 	<plugin name="cordova-plugin-dialogs" spec="~1.3.1" />
 	<plugin spec="https://github.com/apache/cordova-plugin-network-information.git" source="git" />
+	<plugin spec="https://github.com/apache/cordova-plugin-device-motion.git" source="git" />
 </widget>
